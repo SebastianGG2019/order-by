@@ -1,0 +1,198 @@
+/* ==========================================================================
+   ESTILOS BÁSICOS SHOPIFY ADMIN (POLARIS COMPATIBLE)
+   ========================================================================== */
+
+:root {
+  --p-color-bg-app: #f1f2f4;
+  --p-color-bg-surface: #ffffff;
+  --p-color-border: #e1e3e5;
+  --p-color-text: #303030;
+  --p-color-text-subdued: #616161;
+  --p-color-primary: #1a1a1a;
+  --p-color-primary-hover: #000000;
+  --p-color-success-bg: #f0fdf4;
+  --p-color-success-border: #bbf7d0;
+  --p-color-success-text: #166534;
+  --p-color-info-bg: #f0f9ff;
+  --p-color-info-border: #bae6fd;
+  --p-color-info-text: #075985;
+  --p-border-radius: 8px;
+  --p-font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--p-font-family);
+  background-color: var(--p-color-bg-app);
+  color: var(--p-color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Layout Principal --- */
+.Polaris-Page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.Polaris-Page-Header {
+  margin-bottom: 20px;
+}
+
+.Polaris-Page-Header__Title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* --- Tarjetas (Cards) --- */
+.Polaris-Card {
+  background: var(--p-color-bg-surface);
+  border: 1px solid var(--p-color-border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Tipografía --- */
+h1, h2, h3, h4 {
+  margin-top: 0;
+  color: #1a1a1a;
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+/* --- Formularios y Desplegables (Select) --- */
+select, input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #8a8e94;
+  border-radius: var(--p-border-radius);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+select:focus, input:focus {
+  border-color: #005bd3;
+  box-shadow: 0 0 0 2px rgba(0, 91, 211, 0.2);
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--p-color-text);
+}
+
+/* --- Botones --- */
+button, .Polaris-Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: var(--p-border-radius);
+  cursor: pointer;
+  border: 1px solid #c9cccf;
+  background: #ffffff;
+  color: #202223;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+button:hover, .Polaris-Button:hover {
+  background: #f6f6f7;
+  border-color: #babfc3;
+}
+
+button[variant="primary"], .Polaris-Button--variantPrimary {
+  background: var(--p-color-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--p-color-primary) !important;
+}
+
+button[variant="primary"]:hover, .Polaris-Button--variantPrimary:hover {
+  background: var(--p-color-primary-hover) !important;
+}
+
+button:disabled, .Polaris-Button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Tablas de Datos (DataTable) --- */
+.Polaris-DataTable__Table, table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f7f7f7;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--p-color-border);
+  color: var(--p-color-text-subdued);
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--p-color-border);
+}
+
+tr:hover td {
+  background-color: #f9fafb;
+}
+
+/* --- Banners de Notificación --- */
+.Polaris-Banner {
+  border-radius: var(--p-border-radius);
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+.Polaris-Banner--statusSuccess, [tone="success"] {
+  background-color: var(--p-color-success-bg);
+  border-color: var(--p-color-success-border);
+  color: var(--p-color-success-text);
+}
+
+.Polaris-Banner--statusInfo, [tone="info"] {
+  background-color: var(--p-color-info-bg);
+  border-color: var(--p-color-info-border);
+  color: var(--p-color-info-text);
+}
+
+/* --- Estructura Flex/Stack --- */
+div[class*="BlockStack"], .Polaris-BlockStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+span.Polaris-Icon{
+  display: none;
+}
+
+div[class*="InlineStack"], .Polaris-InlineStack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
